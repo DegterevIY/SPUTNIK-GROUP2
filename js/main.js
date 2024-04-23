@@ -1,17 +1,16 @@
-// Получаем элемент с классом "cross"
-var crossElement = document.querySelector('.cross');
+// Получаем все элементы с классом "cross"
+var crosses = document.querySelectorAll('.cross');
 
-// Проверяем, есть ли у элемента класс "cross"
-if (crossElement) {
-    // Добавляем обработчик события клика
-    crossElement.addEventListener('click', function() {
-        // Проверяем, есть ли у элемента класс "active"
-        if (crossElement.classList.contains('active')) {
-            // Убираем класс "active" у элемента
-            crossElement.classList.remove('active');
-        } else {
-            // Добавляем класс "active" к элементу при клике
-            crossElement.classList.add('active');
-        }
-    });
-}
+// Перебираем каждый элемент и добавляем обработчик события клика
+crosses.forEach(function(cross) {
+  cross.addEventListener('click', function() {
+    // Получаем родительский элемент с классом "question_block-cont"
+    var questionBlockCont = cross.closest('.question_block-cont');
+
+    // Добавляем класс "active" к родительскому элементу
+    questionBlockCont.classList.toggle('active');
+
+    // Также переключаем класс "active" для самого крестика
+    cross.classList.toggle('action');
+  });
+});

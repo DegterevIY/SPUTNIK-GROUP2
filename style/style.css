@@ -245,15 +245,31 @@ flex-wrap: wrap;
 .cross{
   position: relative;
   z-index: 2;
-  transform-origin: 22px 22px;
+  transform-origin: 12px 12px;
+  transition: transform 0.2s ease; /* Добавляем плавное изменение высоты */
+
 }
-.active{
+.action{
  
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease; /* Добавляем плавное изменение высоты */
+
+}
+
+.active {
+  .answer {
+    max-height: 300px !important;
+    overflow: hidden;
+  }
 }
 /*--------------- MEDIA --------------*/
 @media (max-width: 1440px) {
