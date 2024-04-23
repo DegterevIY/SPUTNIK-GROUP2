@@ -58,7 +58,7 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -67,6 +67,29 @@ body {
   color: #fff;
 }
 
+/* 23.04 */
+.row{
+  display: flex;
+}
+.col{
+  display: flex;
+  flex-direction: column;
+}
+.wrap{
+flex-wrap: wrap;
+}
+.main-text{
+
+ font-size: 40px;
+ font-weight: bold;
+}
+.center{
+  display: flex;
+  justify-content: center;;
+}
+.mt80{
+  margin-top: 80px;
+}
 /* var.--------------------------------------------------------------- */
 
 :root {  /* colors */
@@ -80,4 +103,179 @@ body {
 .section  {
   color: var(--color-white);
   font-size: var(--font-size-18px);
+}
+
+/* -------------- BOUGHT RECENTLY BLOCK -----------*/
+.boughtrecently{
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 82px;
+  gap: 29px;
+}
+.boughtrecently_card-img{
+  width: 263px;
+  height: 275px;
+}
+.boughtrecently_card-img img{
+  width: 263px;
+  height: 275px;
+  object-fit: cover;
+  object-position: center bottom ;
+}
+.boughtrecently_card-name{
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 15px;
+}
+.boughtrecently_card-prices{
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+.boughtrecently_card-sale{
+  font-size: 22px;
+  font-weight: 500;
+  
+}
+.boughtrecently_card-cost{
+  color: #999999;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration-line: line-through;
+  margin-left: 15px;
+ 
+  
+}
+/* -------------- SUBSCRIBE BLOCK -----------*/
+.subscribe{
+  background-color: #C41429;
+  min-height: 247px;
+}
+.subscribe-main_text{
+  color: #fff;
+  font-size: 36px;
+  font-weight: 500;
+  margin-top: 44px;
+  text-align: center;
+}
+.subscribe-descr_text{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 14px;
+  text-align: center;
+}
+.form{
+  margin-top: 41px;
+
+  input{
+    width: 292px;
+    height: 45.78px;
+  }
+  button{
+    border: 1px solid #fff;
+    background-color: #ffffff00;
+    padding: 13px 65px;
+    color: #fff;
+    margin-left: 36px;
+  }
+  .input-email input{
+    position: relative;
+    color: #999999;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+}
+/* -------------- QUESTION BLOCK -----------*/
+.question_block{
+  width: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  
+}
+.question_block-cont{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #D5D5D5;
+}
+.question{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+.question_block-text{
+  font-weight: bold;
+  font-size: 18px;
+
+}
+.answer_block-text{
+  font-size: 16px;
+  line-height: 150%;
+  padding-bottom: 30px;
+}
+.block-cross {
+  position: relative;
+ /*  z-index: 1; */
+  width:44px;
+  height: 44px;
+  padding: 8px 0 27px;
+}
+.block-cross::before {
+  content: "";
+  position: absolute;
+  background-color: #EFEFEF;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width:44px;
+  height: 44px;
+  /* z-index: 0; */
+  top: -2px;
+  left: -10px;
+ 
+}
+.cross{
+  position: relative;
+  z-index: 2;
+  transform-origin: 22px 22px;
+}
+.active{
+ 
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+/*--------------- MEDIA --------------*/
+@media (max-width: 1440px) {
+  .main-text{
+    text-align: center;
+    padding: 30px 0;
+   }
+}
+@media (max-width:529px){
+  .form{
+    button{
+      margin-top: 15px;
+      margin-left: 0px;
+    }
+  }
+  .subscribe{
+    padding-bottom: 40px;
+  }
+  
+}
+@media (max-width:1175px){
+  .question_block{
+    padding: 0 10px;
+  }
 }
