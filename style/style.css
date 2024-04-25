@@ -291,7 +291,35 @@ flex-wrap: wrap;
 .inst-album{
   justify-content: center;
   gap: 30px;
+  margin-top: 30px;
 }
+
+
+
+.citynn {
+  font-weight: 400;
+  color: #C41429;  
+  position: relative;
+  
+}
+
+.citynn::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #C41429;
+  bottom: -11px;
+}
+.bottom-map {
+  margin-top: 42px;
+  filter: grayscale(1) brightness(100%) ;
+}
+
+.map-widget-layout-view__maps-links {
+  display: none !important;
+}
+
 /*--------------- MEDIA --------------*/
 @media (max-width: 1440px) {
   .main-text{
