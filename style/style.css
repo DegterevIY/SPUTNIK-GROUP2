@@ -81,3 +81,43 @@ body {
   color: var(--color-white);
   font-size: var(--font-size-18px);
 }
+.about{
+  max-width: 1440px;
+  margin: 80px 150px 80px 150px;
+  display: grid;
+  grid-template-columns: 6fr 5fr  
+  
+}
+.about_video{
+  background: url(../img/video\ poster.jpg);
+  width: 555px;
+  height: 420px;
+  padding: 170px 237px;
+}
+.about_text{
+  margin-top: 23px;
+}
+.about_text p{
+  font-family: "Roboto-Regular";
+  font-size: 18px;
+  line-height: 145%;
+  margin-top: 30px;
+}
+.icon{
+  background-color: #F4F4F4;
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  text-align: center;
+  height: 230px;
+}
+.icon_info{
+  margin: 60px 30px 59px;
+}
+.icon_info p{
+  margin-top: 15px;
+  font-family: "Roboto-Regular";
+  line-height: 135%;
+}
+.img_icon{
+  margin: auto;
+}
